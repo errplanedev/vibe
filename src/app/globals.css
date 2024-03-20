@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply p-14;
+}
+
+h1 {
+  @apply text-4xl font-semibold;
+}
+
+h2 {
+  @apply text-3xl font-medium;
+}
+
+h3 {
+  @apply text-2xl font-medium;
+}
+
+button, input {
+  @apply px-4 py-2 border-gray-300 border-2 rounded-md hover:border-gray-400 active:border-gray-500;
+}
+
+input {
+  @apply focus:border-gray-500 focus:outline-none;
+}
+
+hr {
+  @apply border-gray-300;
+}
