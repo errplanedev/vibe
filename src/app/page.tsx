@@ -1,4 +1,5 @@
 import Post from "@/components/Post";
+import Tiptap from "@/components/Tiptap";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <button>get started</button>
       <Post className="-rotate-1" post={{ author: 'zr', content: 'i love vibe, it is the best social media', createdAt: 1710895580462 }}/>
       <Post className="rotate-2" post={{ author: 'lily', content: 'vibe is a great social media' }}/>
+      <Tiptap/>
     </main>
   );
 }

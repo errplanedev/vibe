@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply p-14;
+  @apply p-14 text-gray-800 selection:bg-gray-200;
 }
 
 h1 {
@@ -18,12 +18,12 @@ h3 {
   @apply text-2xl font-medium;
 }
 
-button, input {
+button, input, .tiptap {
   @apply px-4 py-2 border-gray-300 border-2 rounded-md hover:border-gray-400 active:border-gray-500;
 }
 
-input {
-  @apply focus:border-gray-500 focus:outline-none;
+input, .tiptap {
+  @apply focus:border-gray-500 focus:outline-none text-left;
 }
 
 hr {

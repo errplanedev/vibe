@@ -11,7 +11,7 @@ export default function Post(props) {
         <Link href={`/u/${props.post.author}`} className="font-bold text-xl">{props.post.author}</Link>
         <hr />
         <div dangerouslySetInnerHTML={{ __html: props.post.content }}></div>
-        <p className="italic">{dayjs(props.post.createdAt).fromNow()}</p>
+        <p className="italic text-gray-400">{dayjs(props.post.createdAt).fromNow()}</p>
       </div>
     </div>
   )

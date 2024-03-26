@@ -11,19 +11,21 @@ datasource db {
 }
 
 model User {
-  name     String   @unique
-  id       String   @id @default(cuid())
-  password String
-  banned   Boolean  @default(false)
-  admin    Boolean  @default(false)
-  joinedAt DateTime @default(now())
-  Posts    Post[]
+  name       String   @unique
+  id         String   @id @default(cuid())
+  password   String
+  banned     Boolean  @default(false)
+  admin      Boolean  @default(false)
+  joinedAt   DateTime @default(now())
+  lovedPosts Post[]   @relation("Loves")
+  Posts      Post[]
 }
 
 model Post {
-  content  String
-  id       String @id @default(cuid())
-  author   User   @relation(fields: [userId], references: [id])
-  userId   String
-  postedAt DateTime @default(now())
+  content    String
+  id         String @id @default(cuid())
+  author     User   @relation(fields: [userId], references: [id])
+  userId     String
+  loves      User[] @relation("Loves")
+  postedAt   DateTime @default(now())
 }
